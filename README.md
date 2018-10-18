@@ -9,7 +9,7 @@ This project uses a table named 'Students_Table' stored in an Oracle database to
 
 * If the fonts are not available in your system, the installation files for the fonts are available in the Comfortaa directory.
 
-**Sample Screenshots:**
+### **Sample Screenshots:**
 
 ![Home](https://github.com/samirashoi/student-management-system/blob/master/screenshots/dbmsproj-1.PNG)
 ![Add Student Record](https://github.com/samirashoi/student-management-system/blob/master/screenshots/dbmsproj-2.PNG)
