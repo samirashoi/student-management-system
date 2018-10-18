@@ -3,7 +3,7 @@ A simple student management system with CRUD functionalities made using Java, Ne
 This project uses a table named 'Students_Table' stored in an Oracle database to perform operations on the data. 
 
 ### **Note:** 
-* Add your Oracle database Username and Password into the 'config.config' file in order to use Oracle in this application.
+* Add your Oracle database Username and Password into the 'config.config' file in order to use Oracle database in this application.
 
 * The project requires a table named 'Students_Table' to be avalable in your Oracle database. The schema is provided in the 'Students_Table.sql' file.
 
