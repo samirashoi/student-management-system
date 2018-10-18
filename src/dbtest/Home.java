@@ -6,14 +6,7 @@
 package dbtest;
 
 
-import java.awt.Font;
-import java.awt.FontFormatException;
-import java.awt.GraphicsEnvironment;
-import java.io.File;
-import java.io.IOException;
 import java.sql.*;  
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -33,9 +26,11 @@ public class Home extends javax.swing.JFrame {
         try{  
             //step1 load the driver class  
             Class.forName("oracle.jdbc.driver.OracleDriver");  
-
             //step2 create  the connection object  
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","ORACLE_USERNAME","ORACLE_PASSWORD");  
+            Config cfg = new Config();
+            String user = cfg.getProperty("ORACLE_USERNAME");
+            String pass = cfg.getProperty("ORACLE_PASSWORD");
+            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe",user,pass);  
             System.out.println("In loadSampleData()");    
             //step3 create the statement object  
             Statement stmt=con.createStatement();  

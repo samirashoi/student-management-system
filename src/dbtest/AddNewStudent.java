@@ -277,8 +277,11 @@ public class AddNewStudent extends javax.swing.JFrame{
             //step1 load the driver class  
             Class.forName("oracle.jdbc.driver.OracleDriver");  
 
-            //step2 create  the connection object  
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","admin");  
+              //step2 create  the connection object  
+            Config cfg = new Config();
+            String user = cfg.getProperty("ORACLE_USERNAME");
+            String pass = cfg.getProperty("ORACLE_PASSWORD");
+            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe",user,pass);
             //step3 create the statement object  
             PreparedStatement stmt=con.prepareStatement("insert into Students_Table (id,first_name, last_name, dob, gender, CGPA, address, email) values(?,?,?,?,?,?,?,?)");  
             //step4 execute query
